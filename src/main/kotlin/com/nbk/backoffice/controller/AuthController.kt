@@ -1,7 +1,9 @@
 package com.nbk.backoffice.controller
 
+import com.nbk.backoffice.exceptions.BackOfficeException
 import com.nbk.backoffice.repository.UserRepository
 import com.nbk.backoffice.service.JwtService
+import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
@@ -20,7 +22,7 @@ class AuthController(
         authenticationManager.authenticate(authToken)
 
         val user = userRepository.findByUsername(request.username)
-            ?: throw RuntimeException("Invalid credentials")
+            ?: throw BackOfficeException("Invalid credentials", HttpStatus.BAD_REQUEST)
 
         val token = jwtService.generateToken(user)
 
