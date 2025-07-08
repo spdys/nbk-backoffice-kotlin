@@ -1,8 +1,8 @@
-package com.nbk.test.data
+package com.nbk.backoffice.data
 
-import com.nbk.test.entity.Gender
-import com.nbk.test.entity.Role
-import com.nbk.test.entity.UserEntity
+import com.nbk.backoffice.entity.Gender
+import com.nbk.backoffice.entity.Role
+import com.nbk.backoffice.entity.UserEntity
 import java.time.LocalDate
 
 data class UserResponse(

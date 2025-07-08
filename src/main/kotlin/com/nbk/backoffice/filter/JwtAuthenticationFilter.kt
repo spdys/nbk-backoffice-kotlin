@@ -1,6 +1,6 @@
-package com.nbk.test.filter
+package com.nbk.backoffice.filter
 
-import com.nbk.test.service.JwtService
+import com.nbk.backoffice.service.JwtService
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.*
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken

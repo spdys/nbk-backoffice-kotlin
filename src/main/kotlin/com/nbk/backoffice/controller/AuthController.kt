@@ -1,7 +1,7 @@
-package com.nbk.test.controller
+package com.nbk.backoffice.controller
 
-import com.nbk.test.repository.UserRepository
-import com.nbk.test.service.JwtService
+import com.nbk.backoffice.repository.UserRepository
+import com.nbk.backoffice.service.JwtService
 import org.springframework.http.ResponseEntity
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken

@@ -1,6 +1,6 @@
-package com.nbk.test.steps
+package com.nbk.backoffice.steps
 
-import com.nbk.test.config.DataSeeder
+import com.nbk.backoffice.config.DataSeeder
 import io.cucumber.java.Before
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then

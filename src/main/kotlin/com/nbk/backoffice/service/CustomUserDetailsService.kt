@@ -1,6 +1,6 @@
-package com.nbk.test.service
+package com.nbk.backoffice.service
 
-import com.nbk.test.repository.UserRepository
+import com.nbk.backoffice.repository.UserRepository
 import org.springframework.security.core.userdetails.*
 import org.springframework.stereotype.Service
 

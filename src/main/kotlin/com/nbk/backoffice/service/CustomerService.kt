@@ -1,11 +1,11 @@
-package com.nbk.test.service
+package com.nbk.backoffice.service
 
-import com.nbk.test.data.CustomerRequest
-import com.nbk.test.data.UserResponse
-import com.nbk.test.data.toDto
-import com.nbk.test.entity.Role
-import com.nbk.test.entity.UserEntity
-import com.nbk.test.repository.UserRepository
+import com.nbk.backoffice.data.CustomerRequest
+import com.nbk.backoffice.data.UserResponse
+import com.nbk.backoffice.data.toDto
+import com.nbk.backoffice.entity.Role
+import com.nbk.backoffice.entity.UserEntity
+import com.nbk.backoffice.repository.UserRepository
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import kotlin.random.Random
@@ -17,9 +17,7 @@ class CustomerService(
 ) {
 
     fun getAllCustomers(): List<UserResponse> =
-        userRepository.findAll()
-            .filter { it.role == Role.CUSTOMER }
-            .map { it.toDto() }
+        userRepository.findAllCustomersOrderById().map { it.toDto() }
 
     fun createCustomer(req: CustomerRequest): UserResponse {
         val customerNumber = generateCustomerNumber()

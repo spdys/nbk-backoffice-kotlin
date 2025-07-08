@@ -1,4 +1,4 @@
-package com.nbk.test
+package com.nbk.backoffice
 
 import io.cucumber.spring.CucumberContextConfiguration
 import org.junit.jupiter.api.Test
@@ -8,7 +8,7 @@ import org.springframework.test.context.ActiveProfiles
 @ActiveProfiles("test")
 @CucumberContextConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class TestApplicationTests {
+class NbkBackOfficeApplicationTests {
 
 	@Test
 	fun contextLoads() {

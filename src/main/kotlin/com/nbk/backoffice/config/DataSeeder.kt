@@ -1,9 +1,9 @@
-package com.nbk.test.config
+package com.nbk.backoffice.config
 
-import com.nbk.test.entity.Gender
-import com.nbk.test.entity.Role
-import com.nbk.test.entity.UserEntity
-import com.nbk.test.repository.UserRepository
+import com.nbk.backoffice.entity.Gender
+import com.nbk.backoffice.entity.Role
+import com.nbk.backoffice.entity.UserEntity
+import com.nbk.backoffice.repository.UserRepository
 import org.springframework.boot.context.event.ApplicationReadyEvent
 import org.springframework.context.event.EventListener
 import org.springframework.security.crypto.password.PasswordEncoder

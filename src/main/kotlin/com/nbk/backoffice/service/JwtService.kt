@@ -1,6 +1,6 @@
-package com.nbk.test.service
+package com.nbk.backoffice.service
 
-import com.nbk.test.entity.UserEntity
+import com.nbk.backoffice.entity.UserEntity
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.io.Decoders

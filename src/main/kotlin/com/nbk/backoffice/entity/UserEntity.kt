@@ -1,4 +1,4 @@
-package com.nbk.test.entity
+package com.nbk.backoffice.entity
 
 import jakarta.persistence.*
 import java.time.LocalDate

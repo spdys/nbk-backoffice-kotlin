@@ -1,11 +1,11 @@
-package com.nbk.test
+package com.nbk.backoffice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class TestApplication
+class NbkBackOfficeApplication
 
 fun main(args: Array<String>) {
-	runApplication<TestApplication>(*args)
+	runApplication<NbkBackOfficeApplication>(*args)
 }

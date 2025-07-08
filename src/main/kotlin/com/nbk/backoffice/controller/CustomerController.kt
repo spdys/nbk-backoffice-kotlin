@@ -1,8 +1,8 @@
-package com.nbk.test.controller
+package com.nbk.backoffice.controller
 
-import com.nbk.test.data.CustomerRequest
-import com.nbk.test.data.UserResponse
-import com.nbk.test.service.CustomerService
+import com.nbk.backoffice.data.CustomerRequest
+import com.nbk.backoffice.data.UserResponse
+import com.nbk.backoffice.service.CustomerService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
