@@ -95,7 +95,7 @@ class DataSeeder(
     @Transactional
     fun seedInitialData() {
         val users = seedUsers()
-        for (user in users) { println("Updated user: ${user.username}") }
+        for (user in users) { println("Seeded user: ${user.username}") }
     }
 
     private fun generateCustomerNumber(): Int {

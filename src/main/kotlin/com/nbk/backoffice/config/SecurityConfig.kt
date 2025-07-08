@@ -25,9 +25,14 @@ class SecurityConfig(
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http.csrf { it.disable() }
             .authorizeHttpRequests {
+                it.requestMatchers(
+                    "/v3/api-docs/**",
+                    "/swagger-ui/**",
+                    "/swagger-ui.html"
+                ).permitAll()
                 it.requestMatchers("/customers/**").hasRole("ADMIN")
-                    .requestMatchers("/auth/**").permitAll()
-                    .anyRequest().authenticated()
+                it.requestMatchers("/auth/**").permitAll()
+                it.anyRequest().authenticated()
             }
             .sessionManagement {
                 it.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
