@@ -20,6 +20,11 @@ class CustomerController(
         ResponseEntity.ok(customerService.getAllCustomers())
 
     @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/{id}")
+    fun getCustomer(@PathVariable id: Long): ResponseEntity<UserResponse> =
+        ResponseEntity.ok(customerService.getCustomer(id))
+
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     fun add(@RequestBody req: CustomerRequest): ResponseEntity<UserResponse> {
         val created = customerService.createCustomer(req)

@@ -7,6 +7,7 @@ import com.nbk.backoffice.entity.Role
 import com.nbk.backoffice.entity.UserEntity
 import com.nbk.backoffice.exceptions.BackOfficeException
 import com.nbk.backoffice.repository.UserRepository
+import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.HttpStatus
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
@@ -20,6 +21,11 @@ class CustomerService(
 
     fun getAllCustomers(): List<UserResponse> =
         userRepository.findAllCustomersOrderById().map { it.toDto() }
+
+    fun getCustomer(id: Long): UserResponse? {
+        return userRepository.findByIdOrNull(id)?.toDto()
+            ?: throw BackOfficeException("Customer not found", HttpStatus.NOT_FOUND)
+    }
 
     fun createCustomer(req: CustomerRequest): UserResponse {
         requireNotNull(req.username) { "Username must not be null" }
